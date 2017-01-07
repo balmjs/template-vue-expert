@@ -35,6 +35,9 @@ balm.config = {
 
 balm.go(function(mix) {
   if (balm.config.production) {
+    // for test
+    mix.copy('./app/data/*', './dist/data');
+
     // for static
     mix.publish();
     // for html

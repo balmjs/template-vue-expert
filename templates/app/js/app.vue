@@ -12,18 +12,21 @@
 </template>
 
 <script>
+import store from './store';
+
 export default {
   name: 'app',
   data() {
     return {
-      menus: [{
-        name: 'Home',
-        url: '/home'
-      }, {
-        name: 'About',
-        url: '/about'
-      }]
+      menus: []
     };
+  },
+  async created() {
+    if (!store.menus.length) {
+      let response = await this.$http.get('/data/menu.json');
+      store.menus = response.data;
+      this.menus = store.menus;
+    }
   }
 };
 </script>
