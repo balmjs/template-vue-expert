@@ -4,6 +4,7 @@ import VueResource from 'vue-resource';
 import App from './app';
 import routes from './routers';
 
+Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -13,7 +14,7 @@ const router = new VueRouter({
 
 new Vue({
   el: '#app',
+  router,
   template: '<App/>',
-  components: { App },
-  router
+  components: { App }
 });
