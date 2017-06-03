@@ -26,7 +26,6 @@ balm.config = {
   },
   scripts: {
     entry: config.entry,
-    vendors: config.vendors,
     loaders: [{
       test: /\.vue$/,
       loader: 'vue'

@@ -9,7 +9,6 @@ module.exports = {
     vue: ['vue', 'vue-router', 'vue-resource'],
     main: './app/scripts/main.js' // entry js file
   },
-  vendors: ['vue'],
   assets: {
     root: 'assets', // replace 'assets' to your remote project root
     publicPath: 'public'
