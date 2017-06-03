@@ -4,8 +4,7 @@ var config = require('./balmrc');
 balm.config = {
   server: {
     open: true,
-    proxyTable: config.proxyTable,
-    historyApiFallback: true // for vue-router `mode: 'history'`
+    proxyTable: config.proxyTable
   },
   roots: {
     source: 'app'
@@ -33,16 +32,18 @@ balm.config = {
       loader: 'vue'
     }],
     alias: {
-      'vue': balm.config.production ? 'vue/dist/vue.min.js' : 'vue/dist/vue.js'
+      vue: balm.config.production ? 'vue/dist/vue.min.js' : 'vue/dist/vue.js'
     }
   },
   cache: true,
   assets: config.assets
+  // More Config
+  // https://github.com/balmjs/balm/blob/master/docs/configuration.md
 };
 
 balm.go(function(mix) {
   if (balm.config.production) {
-    // for test
+    // for test data
     mix.copy('./app/data/*', './dist/data');
 
     // for static
