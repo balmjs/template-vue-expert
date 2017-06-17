@@ -42,12 +42,12 @@ balm.config = {
 
 balm.go(function(mix) {
   if (balm.config.production) {
-    // for test data
+    // For test data
     mix.copy('./app/data/*', './dist/data');
 
-    // for static
+    // Publish assets
     mix.publish();
-    // for template
+    // Publish templates
     Object.keys(config.publish).forEach(function(key) {
       mix.publish(key, config.publish[key].target, config.publish[key].option || {});
     });
