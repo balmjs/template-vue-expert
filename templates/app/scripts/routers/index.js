@@ -1,5 +1,5 @@
-const Home = require('../views/home');
-const About = require('../views/about');
+import Home from '../views/home';
+import About from '../views/about';
 
 let routes = [{
   path: '/home',
