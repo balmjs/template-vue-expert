@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
+import axios from 'axios';
 import App from './views/layouts/app';
 import routes from './routes';
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
-Vue.use(VueResource);
+Vue.prototype.$http = axios;
 
 const router = new VueRouter({
   routes
