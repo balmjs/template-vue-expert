@@ -1,7 +1,18 @@
-[{
+[
+{
   "name": "Home",
   "url": "/home"
-}, {
+},
+{
   "name": "About",
-  "url": "/about"
+  "url": "/about",
+  "children": [
+  {
+    "name": "BalmUI",
+    "url": "/about/balm-ui"
+  },
+  {
+    "name": "BalmUI lite",
+    "url": "/about/balm-ui-lite"
+  }]
 }]

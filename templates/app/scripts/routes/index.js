@@ -1,19 +1,17 @@
 import Home from '../views/home';
-import About from '../views/about';
 import NotFound from '../views/not-found';
+import aboutRoutes from './about';
 
-let routes = [{
+let baseRoutes = [{
   path: '/home',
   name: 'home',
   component: Home,
   alias: '/'
 }, {
-  path: '/about',
-  name: 'about',
-  component: About
-}, {
   path: '*',
   component: NotFound
 }];
+
+let routes = baseRoutes.concat(aboutRoutes);
 
 export default routes;

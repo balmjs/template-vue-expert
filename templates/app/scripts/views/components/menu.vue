@@ -1,28 +1,31 @@
 <template>
   <nav>
-    <ul class="my-menu">
+    <ul :class="['my-menu', {'submenu': isSubmenu}]">
       <li v-for="item in menu">
-        <router-link :to="item.url">{{ item.name }}</router-link>
+        <router-link activeClass="active" :to="item.url">{{ item.name }}</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import store from '../../store';
-
 export default {
   name: 'my-menu',
-  data() {
-    return {
-      menu: []
-    };
+  props: {
+    items: {
+      type: Array,
+      default() {
+        return [];
+      }
+    },
+    isSubmenu: {
+      type: Boolean,
+      default: false
+    }
   },
-  async created() {
-    if (!store.menu.length) {
-      let response = await this.$http.get('/data/menu.json');
-      store.menu = response.data;
-      this.menu = store.menu;
+  computed: {
+    menu() {
+      return this.items;
     }
   }
 };
