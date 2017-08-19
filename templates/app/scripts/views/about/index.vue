@@ -22,7 +22,7 @@ export default {
     if (menu.length) { // sync data
       this.items = menu[1].children;
     } else { // async data (just for first load)
-      this.$event.$on('setMenu', data => {
+      this.$event.$on('SET_MENU', data => {
         this.items = data[1].children;
       });
     }

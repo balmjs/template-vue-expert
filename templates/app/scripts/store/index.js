@@ -11,7 +11,7 @@ export default {
     }
     this.state.menu = items;
     // For async
-    event.$emit('setMenu', items);
+    event.$emit('SET_MENU', items);
   },
   getMenu() {
     return this.state.menu;
