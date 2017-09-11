@@ -30,12 +30,7 @@ export default {
     };
   },
   async created() {
-    if (!this.store.getMenu().length) {
-      let response = await this.$http.get('/data/menu.json');
-      this.store.setMenu(response.data);
-      // sync data
-      this.items = this.store.getMenu();
-    }
+    this.items = await this.store.getMenu();
   }
 };
 </script>

@@ -1,4 +1,5 @@
 import event from './event';
+import API from '../api';
 
 export default {
   debug: true,
@@ -13,7 +14,12 @@ export default {
     // For async
     event.$emit('SET_MENU', items);
   },
-  getMenu() {
+  async getMenu() {
+    if (!this.state.menu.length) {
+      let data = await API.getMenu();
+      this.setMenu(data);
+    }
+
     return this.state.menu;
   }
 };
