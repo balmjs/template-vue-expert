@@ -1,7 +1,5 @@
-const URL = {
+export default {
   global: {
     getMenu: '/data/menu.json'
   }
 };
-
-export default URL;
