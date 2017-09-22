@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="menu-container">
     <ul :class="['my-menu', {'submenu': isSubmenu}]">
       <li v-for="item in menu">
         <router-link activeClass="active" :to="item.url">{{ item.name }}</router-link>
