@@ -6,18 +6,18 @@ export default {
   state: {
     menu: []
   },
-  setMenu(items) {
+  setMenu(data) {
     if (this.debug) {
-      console.log('setMenu', items);
+      console.log('setMenu', data);
     }
-    this.state.menu = items;
+    this.state.menu = data;
     // For async
-    event.$emit('SET_MENU', items);
+    event.$emit('SET_MENU', data);
   },
   async getMenu() {
     if (!this.state.menu.length) {
-      let data = await API.getMenu();
-      this.setMenu(data);
+      let menu = await API.getMenu();
+      this.setMenu(menu);
     }
 
     return this.state.menu;
