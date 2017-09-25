@@ -30,7 +30,7 @@ export default {
     };
   },
   async created() {
-    this.items = await this.store.getMenu();
+    this.items = await this.$store.getMenu();
   }
 };
 </script>

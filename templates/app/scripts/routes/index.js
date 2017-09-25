@@ -1,17 +1,16 @@
-import Home from '../views/home';
-import NotFound from '../views/not-found';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import VueMeta from 'vue-meta';
+import baseRoutes from './base';
 import aboutRoutes from './about';
 
-let baseRoutes = [{
-  path: '/home',
-  name: 'home',
-  component: Home,
-  alias: '/'
-}, {
-  path: '*',
-  component: NotFound
-}];
+Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 let routes = baseRoutes.concat(aboutRoutes);
 
-export default routes;
+const router = new VueRouter({
+  routes
+});
+
+export default router;

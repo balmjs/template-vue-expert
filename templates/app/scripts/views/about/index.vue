@@ -9,6 +9,9 @@
 import MyMenu from '../components/menu';
 
 export default {
+  metaInfo: {
+    title: 'About'
+  },
   components: {
     MyMenu
   },
@@ -18,7 +21,7 @@ export default {
     };
   },
   async created() {
-    let menu = this.store.state.menu;
+    let menu = this.$store.state.menu;
     if (menu.length) { // sync data
       this.items = menu[1].children;
     } else { // async data (just for first load)

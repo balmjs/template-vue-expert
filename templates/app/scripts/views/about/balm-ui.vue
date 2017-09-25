@@ -4,3 +4,11 @@
     <p>Material Components + Vue</p>
   </div>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    titleTemplate: '%s - BalmUI'
+  }
+};
+</script>

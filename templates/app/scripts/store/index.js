@@ -1,7 +1,8 @@
+import Vue from 'vue';
 import event from './event';
 import API from '../api';
 
-export default {
+const store = {
   debug: true,
   state: {
     menu: []
@@ -23,3 +24,6 @@ export default {
     return this.state.menu;
   }
 };
+
+Vue.prototype.$store = store;
+Vue.prototype.$event = event;

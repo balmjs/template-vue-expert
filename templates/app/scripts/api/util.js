@@ -1,6 +1,5 @@
 import UI from '../store/event';
-
-const OK = 200;
+import { OK } from '../config/constants';
 
 export const callback = ({ code, data, message }) => {
   let result = {
