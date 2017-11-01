@@ -1,5 +1,5 @@
 <template>
-  <div class="my-hello">
+  <div class="hello">
     <h1>{{ msg }}</h1>
     <p>thx <a href="//balmjs.com/">BalmJS</a></p>
   </div>
