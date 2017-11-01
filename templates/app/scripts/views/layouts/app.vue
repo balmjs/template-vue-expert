@@ -2,7 +2,7 @@
   <div class="container">
     <header class="hero">
       <img :src="logo" alt="">
-      <my-hello></my-hello>
+      <hello></hello>
     </header>
     <hr>
     <div class="content">
@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import MyHello from '../components/hello';
-import MyMenu from '../components/menu';
+import hello from '../components/hello';
+import myMenu from '../components/my-menu';
 import logo from '../../../images/logo.png';
 
 export default {
   name: 'app',
   components: {
-    MyHello,
-    MyMenu
+    hello,
+    myMenu
   },
   data() {
     return {

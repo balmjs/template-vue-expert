@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import MyMenu from '../components/menu';
+import myMenu from '../components/my-menu';
 
 export default {
   metaInfo: {
     title: 'About'
   },
   components: {
-    MyMenu
+    myMenu
   },
   data() {
     return {
