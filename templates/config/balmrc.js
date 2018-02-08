@@ -22,23 +22,21 @@ module.exports = {
   },
   styles: {
     ext: 'scss',
-    autoprefixer: [
-      '> 1%',
-      'last 2 versions',
-      'not ie < 9'
-    ]
+    autoprefixer: ['> 1%', 'last 2 versions', 'not ie < 9']
   },
   scripts: {
     entry: {
       lib: ['vue', 'vue-router', 'axios', 'vue-meta'],
       main: './app/scripts/main.js' // Entry js file
     },
-    loaders: [{
-      test: /\.vue$/,
-      loader: 'vue'
-    }],
+    loaders: [
+      {
+        test: /\.vue$/,
+        loader: 'vue'
+      }
+    ],
     alias: {
-      'vue$': balm.config.production ? 'vue/dist/vue.min.js' : 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js'
     }
   },
   cache: true,

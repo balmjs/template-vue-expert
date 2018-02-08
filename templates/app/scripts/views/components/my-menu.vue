@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'menu',
+  name: 'my-menu',
   props: {
     items: {
       type: Array,

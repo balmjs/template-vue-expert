@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import myMenu from '../components/my-menu';
+import MyMenu from '../components/my-menu';
 
 export default {
   metaInfo: {
     title: 'About'
   },
   components: {
-    myMenu
+    MyMenu
   },
   data() {
     return {
@@ -22,9 +22,11 @@ export default {
   },
   async created() {
     let menu = this.$store.state.menu;
-    if (menu.length) { // sync data
+    if (menu.length) {
+      // sync data
       this.items = menu[1].children;
-    } else { // async data (just for first load)
+    } else {
+      // async data (just for first load)
       this.$event.$on('SET_MENU', data => {
         this.items = data[1].children;
       });
