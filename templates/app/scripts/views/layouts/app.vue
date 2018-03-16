@@ -6,7 +6,7 @@
     </header>
     <hr>
     <div class="content">
-      <my-menu :items="items"></my-menu>
+      <my-menu :items="$store.menu"></my-menu>
       <router-view></router-view>
     </div>
   </div>
@@ -25,12 +25,8 @@ export default {
   },
   data() {
     return {
-      logo,
-      items: []
+      logo
     };
-  },
-  async created() {
-    this.items = await this.$store.getMenu();
   }
 };
 </script>

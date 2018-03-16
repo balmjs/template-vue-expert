@@ -15,21 +15,9 @@ export default {
   components: {
     MyMenu
   },
-  data() {
-    return {
-      items: []
-    };
-  },
-  async created() {
-    let menu = this.$store.state.menu;
-    if (menu.length) {
-      // sync data
-      this.items = menu[1].children;
-    } else {
-      // async data (just for first load)
-      this.$event.$on('SET_MENU', data => {
-        this.items = data[1].children;
-      });
+  computed: {
+    items() {
+      return this.$store.menu.length ? this.$store.menu[1].children : [];
     }
   }
 };
