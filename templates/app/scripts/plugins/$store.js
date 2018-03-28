@@ -1,5 +1,7 @@
+import store from '../store';
+
 export default {
-  install(Vue, options) {
-    Vue.prototype.$store = new Vue(options);
+  install(Vue) {
+    Vue.prototype.$store = store;
   }
 };
