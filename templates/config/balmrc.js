@@ -28,7 +28,7 @@ module.exports = {
   },
   scripts: {
     entry: {
-      lib: ['vue', 'vue-router', 'axios', 'vue-meta'],
+      lib: ['vue', 'vue-router', 'axios'],
       main: './app/scripts/main.js' // Entry js file
     },
     loaders: [
