@@ -15,7 +15,7 @@
 <script>
 import Hello from '../components/hello';
 import MyMenu from '../components/my-menu';
-import logo from '../../../images/logo.png';
+import logo from '../../assets/logo.png';
 
 export default {
   name: 'app',
