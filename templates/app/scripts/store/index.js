@@ -1,10 +1,6 @@
 import Vue from 'vue';
-import data from './data';
-import created from './created';
-import methods from './methods';
+import user from './models/user';
 
 export default new Vue({
-  data,
-  created,
-  methods
+  mixins: [user]
 });

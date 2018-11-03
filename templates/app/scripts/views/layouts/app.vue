@@ -27,6 +27,9 @@ export default {
     return {
       logo
     };
+  },
+  created() {
+    this.$store.getMenu();
   }
 };
 </script>
