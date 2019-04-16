@@ -1,6 +1,6 @@
-import AboutIndex from '../views/about/index';
-import AboutBalmUI from '../views/about/balm-ui';
-import AboutBalmUILite from '../views/about/balm-ui-lite';
+import AboutIndex from '@/views/about/index';
+import AboutBalmUI from '@/views/about/balm-ui';
+import AboutBalmUILite from '@/views/about/balm-ui-lite';
 
 let routes = [
   {

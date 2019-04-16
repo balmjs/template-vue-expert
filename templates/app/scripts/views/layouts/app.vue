@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="hero">
-      <img :src="logo" alt="">
+      <img :src="logo" alt>
       <hello></hello>
     </header>
     <hr>
@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Hello from '../components/hello';
-import MyMenu from '../components/my-menu';
-import logo from '../../assets/logo.png';
+import Hello from '@/views/components/hello';
+import MyMenu from '@/views/components/my-menu';
+import logo from '@/assets/logo.png';
 
 export default {
   name: 'app',

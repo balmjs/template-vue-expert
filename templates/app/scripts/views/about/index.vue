@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MyMenu from '../components/my-menu';
+import MyMenu from '@/views/components/my-menu';
 
 export default {
   metaInfo: {
