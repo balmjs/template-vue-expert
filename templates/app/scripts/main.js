@@ -4,6 +4,7 @@ import router from '@/routes';
 import $http from '@/plugins/$http';
 import $bus from '@/plugins/$bus';
 import $store from '@/plugins/$store';
+import '../apis';
 
 Vue.config.productionTip = false;
 Vue.use($http);

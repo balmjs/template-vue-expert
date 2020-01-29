@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { DEBUG } from '@/config';
 
 export default {
   data() {
@@ -8,7 +9,8 @@ export default {
   },
   methods: {
     async getMenu() {
-      let response = await axios.get('/data/menu.json');
+      let url = `/menu${DEBUG ? '' : '.json'}`;
+      let response = await axios.get(url);
       let { code, data, message } = response;
 
       if (code === 200) {
