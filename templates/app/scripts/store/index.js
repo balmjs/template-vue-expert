@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import user from './models/user';
 import { DEBUG } from '@/config';
+import dev from './dev';
+import user from './models/user';
 
 export default new Vue({
   name: 'store',
