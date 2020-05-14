@@ -1,8 +1,8 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import user from './models/user';
 import { DEBUG } from '@/config';
 
-export default new Vue({
+export default createApp({
   name: 'store',
   mixins: [DEBUG ? dev : {}, user]
 });

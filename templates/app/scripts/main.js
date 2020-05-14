@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import App from '@/views/layouts/app';
 import router from '@/routes';
 import $http from '@/plugins/$http';
@@ -6,14 +6,11 @@ import $bus from '@/plugins/$bus';
 import $store from '@/plugins/$store';
 import '../apis';
 
-Vue.config.productionTip = false;
-Vue.use($http);
-Vue.use($bus);
-Vue.use($store);
+const app = createApp(App);
 
-new Vue({
-  el: '#app',
-  components: { App },
-  template: '<app/>',
-  router
-});
+app.use(router);
+app.use($http);
+app.use($bus);
+app.use($store);
+
+app.mount('#app');
