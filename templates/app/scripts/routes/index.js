@@ -1,10 +1,13 @@
-import { createRouter } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import baseRoutes from './base';
 import aboutRoutes from './about';
 
-let routes = baseRoutes.concat(aboutRoutes);
+const routes = baseRoutes.concat(aboutRoutes);
+
+const history = createWebHashHistory();
 
 const router = createRouter({
+  history,
   routes
 });
 

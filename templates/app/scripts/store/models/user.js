@@ -1,23 +1,28 @@
+import { reactive, toRefs } from 'vue';
 import axios from 'axios';
 import { DEBUG } from '@/config';
 
 export default {
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       menu: []
-    };
-  },
-  methods: {
-    async getMenu() {
+    });
+
+    const getMenu = async () => {
       let url = `/menu${DEBUG ? '' : '.json'}`;
       let response = await axios.get(url);
       let { code, data, message } = response;
 
       if (code === 200) {
-        this.menu = data;
+        state.menu = data;
       } else {
         alert(message);
       }
-    }
+    };
+
+    return {
+      ...toRefs(state),
+      getMenu
+    };
   }
 };

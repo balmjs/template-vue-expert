@@ -5,9 +5,5 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Not Found'
-  }
-};
+export default {};
 </script>

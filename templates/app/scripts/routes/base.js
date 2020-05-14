@@ -9,7 +9,7 @@ let baseRoutes = [
     alias: '/'
   },
   {
-    path: '*',
+    path: '/*',
     component: NotFound
   }
 ];
