@@ -17,7 +17,7 @@ if (DEBUG) {
             },
             {
               name: 'About',
-              url: '/about',
+              url: '/about/balm-ui',
               children: [
                 {
                   name: 'BalmUI',

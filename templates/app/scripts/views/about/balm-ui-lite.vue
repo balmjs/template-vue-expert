@@ -6,9 +6,5 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    titleTemplate: '%s - BalmUI Lite'
-  }
-};
+export default {};
 </script>

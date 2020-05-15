@@ -9,8 +9,6 @@
 
 <script>
 export default {
-  metaInfo: {
-    titleTemplate: '%s - BalmUI'
-  }
+  setup() {}
 };
 </script>

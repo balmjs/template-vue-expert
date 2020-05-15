@@ -1,9 +1,10 @@
-import { createApp } from 'vue';
-import { DEBUG } from '@/config';
-import dev from './dev';
-import user from './models/user';
+import { createApp, reactive } from 'vue';
 
-export default createApp({
-  name: 'store',
-  mixins: [DEBUG ? dev : {}, user]
-});
+const storeApp = createApp(
+  {},
+  reactive({
+    menu: []
+  })
+);
+
+export default storeApp._props;

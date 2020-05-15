@@ -1,5 +1,5 @@
 import Home from '@/views/home';
-import NotFound from '@/views/not-found';
+// import NotFound from '@/views/not-found';
 
 let baseRoutes = [
   {
@@ -7,11 +7,11 @@ let baseRoutes = [
     name: 'home',
     component: Home,
     alias: '/'
-  },
-  {
-    path: '/*',
-    component: NotFound
   }
+  // {
+  //   path: '/*',
+  //   component: NotFound
+  // }
 ];
 
 export default baseRoutes;

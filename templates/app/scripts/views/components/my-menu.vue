@@ -28,9 +28,7 @@ export default {
     }
   },
   setup(props) {
-    const menu = computed(() => {
-      return props.menu;
-    });
+    const menu = computed(() => props.items);
 
     return {
       menu
