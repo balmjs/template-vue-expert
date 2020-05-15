@@ -1,12 +1,9 @@
-import { onBeforeMount } from 'vue';
-
 const el = document.createElement('div');
 
 export default {
+  el,
   template: '<div v-if="false"></div>',
-  setup() {
-    onBeforeMount(() => {
-      document.body.appendChild(el);
-    });
+  created() {
+    document.body.appendChild(el);
   }
 };
