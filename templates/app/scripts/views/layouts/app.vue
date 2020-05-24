@@ -11,13 +11,14 @@
 </template>
 
 <script>
-import { inject, ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
+import { useBus, useHttp, useStore } from '@/plugins';
 
 function init() {
-  const $bus = inject('$bus');
+  const $bus = useBus();
 
   $bus.$on('on-loading', () => {
     console.log('on-loading');
@@ -37,10 +38,10 @@ export default {
   setup() {
     init();
 
-    const $store = inject('$store');
+    const $store = useStore();
 
     onMounted(async () => {
-      const $http = inject('$http');
+      const $http = useHttp();
 
       let url = `/menu`;
       let response = await $http.get(url);

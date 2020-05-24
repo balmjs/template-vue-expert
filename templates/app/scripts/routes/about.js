@@ -5,10 +5,13 @@ import AboutBalmUILite from '@/views/about/balm-ui-lite';
 let routes = [
   {
     path: '/about',
-    name: 'about',
     component: AboutIndex,
-    redirect: '/about/balm-ui',
     children: [
+      {
+        path: '',
+        name: 'about.index',
+        redirect: { name: 'about.balm-ui' }
+      },
       {
         path: 'balm-ui',
         name: 'about.balm-ui',
