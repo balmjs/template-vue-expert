@@ -1,7 +1,7 @@
 import { Server } from 'miragejs';
-import { DEBUG } from '@/config';
+import { isDev } from '@/config';
 
-if (DEBUG) {
+if (isDev) {
   new Server({
     routes() {
       this.namespace = 'api';

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <header class="hero">
-      <img :src="logo" alt>
+      <img :src="logo" alt />
       <hello></hello>
     </header>
-    <hr>
+    <hr />
     <div class="content">
       <my-menu :items="$store.menu"></my-menu>
       <router-view></router-view>
