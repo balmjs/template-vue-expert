@@ -2,9 +2,11 @@ import { Server } from 'miragejs';
 import { isDev } from '@/config';
 
 if (isDev) {
-  new Server({
+  const ApiRegExp = /^\/api\//;
+
+  const server = new Server({
     routes() {
-      this.namespace = 'api';
+      this.namespace = '/api';
 
       this.get('/menu', () => {
         return {
@@ -33,5 +35,9 @@ if (isDev) {
         };
       });
     }
+  });
+
+  server.passthrough((request) => {
+    return !ApiRegExp.test(request.url);
   });
 }
