@@ -1,14 +1,12 @@
 import { isDev } from '@/config';
-import { Server, Model } from 'miragejs';
+import { Server } from 'miragejs';
 import { getBase } from './base';
 
 if (isDev) {
   const ApiRegExp = /^\/api\//;
 
   const server = new Server({
-    models: {
-      menu: Model
-    },
+    models: {},
 
     seeds(server) {
       // More data
