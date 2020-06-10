@@ -1,18 +1,20 @@
 <template>
   <nav class="menu-container">
-    <ul :class="['my-menu', {'submenu': isSubmenu}]">
-      <li v-for="(item, index) in menu" :key="index">
-        <router-link activeClass="active" :to="item.url">
-          {{ item.name }}
-        </router-link>
-      </li>
+    <ul :class="['my-menu', { submenu: isSubmenu }]">
+      <template v-for="(item, index) in menu">
+        <li :key="index">
+          <router-link :to="item.url" active-class="active">
+            {{ item.name }}
+          </router-link>
+        </li>
+      </template>
     </ul>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'my-menu',
+  name: 'MyMenu',
   props: {
     items: {
       type: Array,

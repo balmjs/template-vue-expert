@@ -13,6 +13,7 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   response => {
+    // TODO: response handler
     return response.data;
   },
   error => {

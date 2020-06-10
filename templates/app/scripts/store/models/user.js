@@ -1,16 +1,15 @@
-import axios from 'axios';
 import { isDev } from '@/config';
 
 export default {
   data() {
     return {
-      menu: []
+      menu: [] // shared data
     };
   },
   methods: {
     async getMenu() {
-      let url = `/menu${isDev ? '' : '.json'}`;
-      let response = await axios.get(url);
+      let url = `/menu${isDev ? '' : '.json'}`; // NOTE: for mock
+      let response = await this.$http.get(url);
       let { code, data, message } = response;
 
       if (code === 200) {

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="hero">
-      <img :src="logo" alt />
+      <img :src="logo" />
       <hello></hello>
     </header>
     <hr />
@@ -18,7 +18,7 @@ import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Hello,
     MyMenu
