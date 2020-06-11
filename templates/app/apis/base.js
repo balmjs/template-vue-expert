@@ -1,7 +1,5 @@
-// export function setBase(server) {}
-
 export function getBase(server) {
-  server.get('/menu', (schema, request) => {
+  server.get('/menu', () => {
     return {
       code: 200,
       message: 'OK',
