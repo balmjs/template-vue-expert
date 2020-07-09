@@ -33,8 +33,18 @@ module.exports = {
     ],
     plugins: [new VueLoaderPlugin()],
     alias: {
-      '@': path.resolve(__dirname, '..', 'app', 'scripts')
-    }
+      '@': path.resolve(__dirname, '..', 'app', 'scripts'),
+      'balm-ui': path.resolve(
+        __dirname,
+        '..',
+        '..',
+        '..',
+        'balm-ui/src/scripts/index.js'
+      )
+    },
+    includeJsResource: [
+      path.resolve(__dirname, '..', '..', '..', 'balm-ui/src/scripts')
+    ]
   },
   assets: {
     root: 'assets', // Replace 'assets' to your remote project root
