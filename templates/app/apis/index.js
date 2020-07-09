@@ -1,37 +1,26 @@
+import { isDev } from '@/config';
 import { Server } from 'miragejs';
-import { DEBUG } from '@/config';
+import { getBase } from './base';
 
-if (DEBUG) {
-  new Server({
+if (isDev) {
+  const ApiRegExp = /^\/api\//;
+
+  const server = new Server({
+    models: {},
+
+    seeds(server) {
+      // More data
+    },
+
     routes() {
-      this.namespace = 'api';
+      this.namespace = '/api';
 
-      this.get('/menu', () => {
-        return {
-          code: 200,
-          message: 'OK',
-          data: [
-            {
-              name: 'Home',
-              url: '/home'
-            },
-            {
-              name: 'About',
-              url: '/about',
-              children: [
-                {
-                  name: 'BalmUI',
-                  url: '/about/balm-ui'
-                },
-                {
-                  name: 'BalmUI lite',
-                  url: '/about/balm-ui-lite'
-                }
-              ]
-            }
-          ]
-        };
-      });
+      getBase(this);
+      // More apis
     }
+  });
+
+  server.passthrough((request) => {
+    return !ApiRegExp.test(request.url);
   });
 }
