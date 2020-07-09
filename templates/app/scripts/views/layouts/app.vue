@@ -1,12 +1,14 @@
 <template>
-  <header class="hero">
-    <img :src="logo" alt />
-    <hello></hello>
-  </header>
-  <hr />
-  <div class="content">
-    <my-menu :items="$store.menu"></my-menu>
-    <router-view></router-view>
+  <div class="container">
+    <header class="hero">
+      <img :src="logo" alt />
+      <hello></hello>
+    </header>
+    <hr />
+    <div class="content">
+      <my-menu :items="$store.menu"></my-menu>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -30,7 +32,7 @@ function init() {
 }
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Hello,
     MyMenu

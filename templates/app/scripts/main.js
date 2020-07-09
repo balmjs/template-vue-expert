@@ -4,7 +4,8 @@ import router from '@/routes';
 import $bus from '@/plugins/$bus';
 import $http from '@/plugins/$http';
 import $store from '@/plugins/$store';
-import '../apis';
+
+import '../apis'; // NOTE: Just for dev
 
 const app = createApp(App);
 
