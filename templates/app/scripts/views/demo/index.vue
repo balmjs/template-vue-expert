@@ -1,5 +1,5 @@
 <template>
-  <div class="page--about ui-container">
+  <div class="page--ui ui-container">
     <my-menu isSubmenu :items="items"></my-menu>
     <router-view></router-view>
   </div>
@@ -10,7 +10,7 @@ import MyMenu from '@/views/components/my-menu';
 
 export default {
   metaInfo: {
-    title: 'About'
+    title: 'UI'
   },
   components: {
     MyMenu

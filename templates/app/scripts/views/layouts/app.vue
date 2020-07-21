@@ -4,7 +4,6 @@
       <img :src="logo" />
       <hello></hello>
     </header>
-    <hr />
     <div class="content">
       <my-menu :items="$store.menu"></my-menu>
       <router-view></router-view>

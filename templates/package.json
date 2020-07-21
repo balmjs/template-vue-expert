@@ -24,10 +24,11 @@
     "eslint-plugin-vue": "^6.2.2",
     "gulp": "^4.0.2",
     "jest": "^26.1.0",
-    "vue-jest": "^3.0.6",
     "miragejs": "^0.1.40",
+    "vue-jest": "^3.0.6",
     "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0"
   },
   "private": true
 }
