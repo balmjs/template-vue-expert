@@ -11,12 +11,12 @@ let routes = [
     children: [
       {
         path: 'balm-ui',
-        name: 'about.balm-ui',
+        name: 'demo.balm-ui',
         component: DemoBalmUI
       },
       {
         path: 'balm-ui-lite',
-        name: 'about.balm-ui-lite',
+        name: 'demo.balm-ui-lite',
         component: DemoBalmUILite
       }
     ]
