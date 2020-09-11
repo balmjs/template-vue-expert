@@ -9,16 +9,16 @@ export function getBase(server) {
           url: '/home'
         },
         {
-          name: 'About',
-          url: '/about',
+          name: 'Demo',
+          url: '/demo',
           children: [
             {
               name: 'BalmUI',
-              url: '/about/balm-ui'
+              url: '/demo/balm-ui'
             },
             {
               name: 'BalmUI lite',
-              url: '/about/balm-ui-lite'
+              url: '/demo/balm-ui-lite'
             }
           ]
         }
