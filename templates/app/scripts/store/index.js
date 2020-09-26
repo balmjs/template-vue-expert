@@ -1,10 +1,7 @@
-import { createApp, reactive } from 'vue';
+import useDemoStore from './demo';
 
-const storeApp = createApp(
-  {},
-  reactive({
-    menu: []
-  })
-);
-
-export default storeApp._props;
+export default () => {
+  return {
+    ...useDemoStore()
+  };
+};

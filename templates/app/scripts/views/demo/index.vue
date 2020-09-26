@@ -8,17 +8,17 @@
 <script>
 import { computed } from 'vue';
 import MyMenu from '@/views/components/my-menu';
-import { useStore } from '@/plugins';
+import { useStore } from 'balm-ui';
 
 export default {
   components: {
     MyMenu
   },
   setup() {
-    const $store = useStore();
+    const store = useStore();
 
     const menu = computed(() => {
-      return $store.menu.length ? $store.menu[1].children : [];
+      return store.menu.length ? store.menu[1].children : [];
     });
 
     return {

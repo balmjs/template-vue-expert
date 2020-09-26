@@ -32,18 +32,9 @@ module.exports = {
     ],
     plugins: [new VueLoaderPlugin()],
     alias: {
-      '@': path.resolve(__dirname, '..', 'app', 'scripts'),
-      'balm-ui': path.resolve(
-        __dirname,
-        '..',
-        '..',
-        '..',
-        'balm-ui/src/scripts/index.js'
-      )
-    },
-    includeJsResource: [
-      path.resolve(__dirname, '..', '..', '..', 'balm-ui/src/scripts')
-    ]
+      vue$: 'vue/dist/vue.esm-bundler.js',
+      '@': path.resolve(__dirname, '..', 'app', 'scripts')
+    }
   },
   assets: {
     root: 'assets', // Replace 'assets' to your remote project root

@@ -3,19 +3,19 @@ import axios from 'axios';
 axios.defaults.baseURL = '/api';
 
 axios.interceptors.request.use(
-  (config) => {
+  config => {
     return config;
   },
-  (error) => {
+  error => {
     return Promise.reject(error);
   }
 );
 
 axios.interceptors.response.use(
-  (response) => {
+  response => {
     return response.data;
   },
-  (error) => {
+  error => {
     // TODO: error handler
     return Promise.reject(error);
   }
@@ -23,6 +23,7 @@ axios.interceptors.response.use(
 
 export default {
   install(app) {
-    app.provide('$http', axios);
+    app.config.globalProperties.$http = axios;
+    app.provide('http', axios);
   }
 };

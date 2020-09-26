@@ -6,7 +6,7 @@
     </header>
     <hr />
     <div class="content">
-      <my-menu :items="$store.menu"></my-menu>
+      <my-menu :items="store.menu"></my-menu>
       <router-view></router-view>
     </div>
   </div>
@@ -17,19 +17,8 @@ import { ref, onMounted } from 'vue';
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
-import { useBus, useHttp, useStore } from '@/plugins';
-
-function init() {
-  const $bus = useBus();
-
-  $bus.$on('on-loading', () => {
-    console.log('on-loading');
-  });
-
-  $bus.$on('off-loading', () => {
-    console.log('off-loading');
-  });
-}
+import { useHttp } from '@/plugins';
+import { useStore } from 'balm-ui';
 
 export default {
   name: 'App',
@@ -37,10 +26,8 @@ export default {
     Hello,
     MyMenu
   },
-  setup() {
-    init();
-
-    const $store = useStore();
+  setup(props, ctx) {
+    const store = useStore();
 
     onMounted(async () => {
       const $http = useHttp();
@@ -50,14 +37,14 @@ export default {
       let { code, data, message } = response;
 
       if (code === 200) {
-        $store.menu = ref(data);
+        store.menu = data;
       } else {
         alert(message);
       }
     });
 
     return {
-      $store,
+      store,
       logo
     };
   }
