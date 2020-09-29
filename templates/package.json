@@ -9,24 +9,25 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "vue": "^2.6.11",
+    "axios": "^0.20.0",
+    "balm-ui": "^8.2.3",
+    "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.4.2"
+    "vue-router": "^3.4.5"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.0.3",
+    "@vue/test-utils": "^1.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.2.2",
-    "balm": "^3.0.0",
-    "eslint": "^7.6.0",
+    "babel-jest": "^26.3.0",
+    "balm": "^3.5.0",
+    "eslint": "^7.10.0",
     "eslint-plugin-vue": "^6.2.2",
-    "jest": "^26.2.2",
+    "jest": "^26.4.0",
     "miragejs": "^0.1.40",
-    "vue-jest": "^3.0.6",
+    "vue-jest": "^3.0.0",
     "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.0"
   },
   "private": true
