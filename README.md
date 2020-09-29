@@ -21,9 +21,19 @@ balm -V
 
 ## Installation
 
-```sh
-balm init vue-expert my-project
+- For Vue 2.0
 
+  ```sh
+  balm init vue-expert my-project
+  ```
+
+- For Vue 3.0
+
+  ```sh
+  balm init vue-expert#next my-project
+  ```
+
+```sh
 cd my-project
 yarn
 # or
