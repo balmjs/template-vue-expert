@@ -9,8 +9,9 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    node: true,
     browser: true,
+    node: true,
+    es6: true,
     jest: true
   },
   plugins: ['vue'],

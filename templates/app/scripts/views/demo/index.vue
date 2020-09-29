@@ -18,7 +18,7 @@ export default {
     const store = useStore();
 
     const menu = computed(() => {
-      return store.menu.length ? store.menu[1].children : [];
+      return store.demoMenu.length ? store.demoMenu[1].children : [];
     });
 
     return {

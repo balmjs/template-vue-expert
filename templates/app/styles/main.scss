@@ -1,9 +1,9 @@
-@import 'global/index';
+@use './global';
 
-@import 'layouts/index';
+@use './layouts';
 
-@import 'components/hello';
-@import 'components/menu';
+@use './components/hello';
+@use './components/menu';
 
-@import 'pages/home';
-@import 'pages/about';
+@use './pages/home';
+@use './pages/about';

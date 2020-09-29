@@ -6,7 +6,7 @@
     </header>
     <hr />
     <div class="content">
-      <my-menu :items="store.menu"></my-menu>
+      <my-menu :items="store.demoMenu"></my-menu>
       <router-view></router-view>
     </div>
   </div>
@@ -17,7 +17,6 @@ import { ref, onMounted } from 'vue';
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
-import { useHttp } from '@/plugins';
 import { useStore } from 'balm-ui';
 
 export default {
@@ -26,21 +25,11 @@ export default {
     Hello,
     MyMenu
   },
-  setup(props, ctx) {
+  setup() {
     const store = useStore();
 
     onMounted(async () => {
-      const $http = useHttp();
-
-      let url = `/menu`;
-      let response = await $http.get(url);
-      let { code, data, message } = response;
-
-      if (code === 200) {
-        store.menu = data;
-      } else {
-        alert(message);
-      }
+      await store.getDemoMenu();
     });
 
     return {
