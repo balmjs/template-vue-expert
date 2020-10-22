@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
