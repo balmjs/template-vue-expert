@@ -46,10 +46,10 @@ module.exports = {
         vue$: 'vue/dist/vue.esm-bundler.js'
       },
       // fix(vue@3.0.1+): __VUE_HMR_RUNTIME__ is not defined in development
-      {
-        '@vue/runtime-core':
-          '@vue/runtime-core/dist/runtime-core.esm-bundler.js'
-      }
+      // {
+      //   '@vue/runtime-core':
+      //     '@vue/runtime-core/dist/runtime-core.esm-bundler.js'
+      // }
     )
   },
   assets: {
