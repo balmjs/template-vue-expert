@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from '@/views/layouts/app';
 import router from '@/routes';
 import http from '@/plugins/http';
-import store from '@/store';
+import myStore from '@/store';
 // BalmUI
 import BalmUI from 'balm-ui';
 import 'balm-ui/dist/balm-ui.css';
@@ -13,7 +13,7 @@ Vue.config.productionTip = false;
 
 Vue.use(http);
 Vue.use(BalmUI, {
-  store
+  $store: myStore
 });
 
 new Vue({
