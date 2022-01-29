@@ -1,5 +1,5 @@
-import user from './models/user';
+import useDemoStore from './demo';
 
 export default {
-  mixins: [user]
+  ...useDemoStore()
 };

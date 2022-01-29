@@ -1,18 +1,18 @@
 <template>
   <nav class="menu-container">
     <ul :class="['my-menu', { submenu: isSubmenu }]">
-      <template v-for="(item, index) in menu">
-        <li :key="index">
-          <router-link :to="item.url" active-class="active">
-            {{ item.name }}
-          </router-link>
-        </li>
-      </template>
+      <li v-for="(item, index) in menu" :key="index">
+        <router-link :to="item.url" active-class="active">{{
+          item.name
+        }}</router-link>
+      </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import { computed } from 'vue';
+
 export default {
   name: 'MyMenu',
   props: {
@@ -27,10 +27,12 @@ export default {
       default: false
     }
   },
-  computed: {
-    menu() {
-      return this.items;
-    }
+  setup(props) {
+    const menu = computed(() => props.items);
+
+    return {
+      menu
+    };
   }
 };
 </script>

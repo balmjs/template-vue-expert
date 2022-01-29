@@ -3,14 +3,10 @@
     <h2>
       <a href="//balm.js.org/">BalmJS</a>
     </h2>
-    <p>A flexible Front-End workflow for any webapps</p>
+    <p>A flexible front-end workflow for webapps</p>
   </div>
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Home'
-  }
-};
+export default {};
 </script>

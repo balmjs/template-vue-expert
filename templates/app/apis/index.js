@@ -20,7 +20,7 @@ if (isDev) {
     }
   });
 
-  server.passthrough(request => {
+  server.passthrough((request) => {
     return !ApiRegExp.test(request.url);
   });
 }

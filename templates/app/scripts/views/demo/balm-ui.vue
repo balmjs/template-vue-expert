@@ -8,9 +8,5 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    titleTemplate: '%s - BalmUI'
-  }
-};
+export default {};
 </script>

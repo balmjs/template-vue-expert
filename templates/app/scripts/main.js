@@ -1,24 +1,18 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import App from '@/views/layouts/app';
 import router from '@/routes';
 import http from '@/plugins/http';
 import myStore from '@/store';
-// BalmUI
 import BalmUI from 'balm-ui';
-import 'balm-ui/dist/balm-ui.css';
 
 import '../apis'; // NOTE: Just for dev
 
-Vue.config.productionTip = false;
+const app = createApp(App);
 
-Vue.use(http);
-Vue.use(BalmUI, {
+app.use(router);
+app.use(http);
+app.use(BalmUI, {
   $store: myStore
 });
 
-new Vue({
-  el: '#app',
-  components: { App },
-  template: '<app/>',
-  router
-});
+app.mount('#app');

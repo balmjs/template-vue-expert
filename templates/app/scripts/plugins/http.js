@@ -13,7 +13,6 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   (response) => {
-    // TODO: response handler
     return response.data;
   },
   (error) => {
@@ -25,7 +24,9 @@ axios.interceptors.response.use(
 const useHttp = () => axios;
 
 export default {
-  install(Vue) {
-    Vue.prototype.$http = axios;
+  install(app) {
+    app.config.globalProperties.$http = axios;
+    app.provide('http', axios);
   }
 };
+export { useHttp };

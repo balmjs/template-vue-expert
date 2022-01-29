@@ -5,10 +5,13 @@ import DemoBalmUILite from '@/views/demo/balm-ui-lite';
 let routes = [
   {
     path: '/demo',
-    name: 'demo',
     component: DemoIndex,
-    redirect: '/demo/balm-ui',
     children: [
+      {
+        path: '',
+        name: 'demo.index',
+        redirect: { name: 'demo.balm-ui' }
+      },
       {
         path: 'balm-ui',
         name: 'demo.balm-ui',
