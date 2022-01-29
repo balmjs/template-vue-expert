@@ -18,8 +18,7 @@ module.exports = {
     source: 'app'
   },
   styles: {
-    extname: 'scss',
-    dartSass: true
+    extname: 'scss'
   },
   scripts: {
     entry: {
@@ -44,7 +43,7 @@ module.exports = {
       {
         '@': path.resolve(__dirname, '..', 'app', 'scripts'),
         vue$: 'vue/dist/vue.esm-bundler.js'
-      },
+      }
       // fix(vue@3.0.1+): __VUE_HMR_RUNTIME__ is not defined in development
       // {
       //   '@vue/runtime-core':
