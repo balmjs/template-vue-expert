@@ -1,9 +1,4 @@
 @use './global';
-
 @use './layouts';
-
-@use './components/hello';
-@use './components/menu';
-
-@use './pages/home';
-@use './pages/about';
+@use './components';
+@use './pages';
