@@ -1,5 +1,5 @@
-import user from './models/user';
+import demo from './modules/demo';
 
 export default {
-  mixins: [user]
+  mixins: [demo]
 };

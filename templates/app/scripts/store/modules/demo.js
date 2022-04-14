@@ -8,7 +8,7 @@ export default {
   },
   methods: {
     async getMenu() {
-      let url = `/menu${isDev ? '' : '.json'}`; // NOTE: for mock
+      let url = isDev ? '/mock/menu' : '/menu.json';
       let response = await this.$http.get(url);
       let { code, data, message } = response;
 
