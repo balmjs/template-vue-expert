@@ -9,7 +9,7 @@ const state = reactive({
 });
 
 async function getDemoMenu() {
-  let url = `/menu${isDev ? '' : '.json'}`; // NOTE: for mock
+  let url = isDev ? '/mock/menu' : '/menu.json';
   let response = await $http.get(url);
   let { code, data, message } = response;
 

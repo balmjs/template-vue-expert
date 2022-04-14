@@ -21,9 +21,19 @@ balm -V
 
 ## Installation
 
-```sh
-balm init vue-expert my-project
+- For vue3
 
+  ```sh
+  balm init vue-expert my-project
+  ```
+
+- For vue2
+
+  ```sh
+  balm init vue-expert#legacy my-project
+  ```
+
+```sh
 cd my-project
 yarn
 # or

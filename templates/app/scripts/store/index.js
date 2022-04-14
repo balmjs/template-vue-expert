@@ -1,4 +1,4 @@
-import useDemoStore from './demo';
+import useDemoStore from './modules/demo';
 
 export default {
   ...useDemoStore()

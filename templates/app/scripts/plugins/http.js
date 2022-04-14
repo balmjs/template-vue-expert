@@ -13,7 +13,8 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   (response) => {
-    return response.data;
+    // TODO: response handler
+    return Promise.resolve(response.data);
   },
   (error) => {
     // TODO: error handler

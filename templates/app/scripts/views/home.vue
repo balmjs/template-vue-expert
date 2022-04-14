@@ -3,7 +3,7 @@
     <h2>
       <a href="//balm.js.org/">BalmJS</a>
     </h2>
-    <p>A flexible front-end workflow for webapps</p>
+    <p>An Universal Front-End Workflow</p>
   </div>
 </template>
 
