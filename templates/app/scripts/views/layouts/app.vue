@@ -6,18 +6,17 @@
     </header>
     <hr />
     <div class="content">
-      <my-menu :items="store.demoMenu"></my-menu>
+      <my-menu :items="menu"></my-menu>
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import { onMounted } from 'vue';
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
-import { useStore } from 'balm-ui';
+import menu from '@/assets/menu.json';
 
 export default {
   name: 'App',
@@ -26,15 +25,9 @@ export default {
     MyMenu
   },
   setup() {
-    const store = useStore();
-
-    onMounted(async () => {
-      await store.getDemoMenu();
-    });
-
     return {
-      store,
-      logo
+      logo,
+      menu
     };
   }
 };
