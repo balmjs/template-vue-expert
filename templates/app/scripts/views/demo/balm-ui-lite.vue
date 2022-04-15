@@ -4,11 +4,3 @@
     <p>Material Design Lite + Vue</p>
   </div>
 </template>
-
-<script>
-export default {
-  metaInfo: {
-    titleTemplate: '%s - BalmUI Lite'
-  }
-};
-</script>

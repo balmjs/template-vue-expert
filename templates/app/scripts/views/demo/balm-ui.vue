@@ -6,11 +6,3 @@
     <p>Next Generation Material UI for Vue.js</p>
   </div>
 </template>
-
-<script>
-export default {
-  metaInfo: {
-    titleTemplate: '%s - BalmUI'
-  }
-};
-</script>

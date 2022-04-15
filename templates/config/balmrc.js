@@ -29,7 +29,7 @@ module.exports = {
   },
   scripts: {
     entry: {
-      lib: ['vue', 'vue-router', 'vue-meta', 'axios'],
+      lib: ['vue', 'vue-router'],
       main: `./${appRoot}/scripts/main.js` // Entry js file
     },
     loaders: [
@@ -41,7 +41,6 @@ module.exports = {
     plugins: [new VueLoaderPlugin()],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@mock-server': resolve('mock-server'),
       '@': resolve(`${appRoot}/scripts`)
     }
   },

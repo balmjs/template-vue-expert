@@ -5,7 +5,7 @@
       <hello></hello>
     </header>
     <div class="content">
-      <my-menu :items="$store.menu"></my-menu>
+      <my-menu :items="menu"></my-menu>
       <router-view></router-view>
     </div>
   </div>
@@ -15,6 +15,7 @@
 import Hello from '@/views/components/hello';
 import MyMenu from '@/views/components/my-menu';
 import logo from '@/assets/logo.png';
+import menu from '@/assets/menu.json';
 
 export default {
   name: 'App',
@@ -24,11 +25,9 @@ export default {
   },
   data() {
     return {
-      logo
+      logo,
+      menu
     };
-  },
-  created() {
-    this.$store.getMenu();
   }
 };
 </script>
