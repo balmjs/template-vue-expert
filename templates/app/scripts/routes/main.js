@@ -2,7 +2,7 @@ import Home from '@/views/home';
 import NotFound from '@/views/not-found';
 import demoRoutes from './demo';
 
-let baseRoutes = [
+const routes = [
   {
     path: '/home',
     name: 'home',
@@ -16,4 +16,4 @@ let baseRoutes = [
   }
 ];
 
-export default baseRoutes;
+export default routes;
