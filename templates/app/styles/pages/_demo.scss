@@ -1,7 +1,17 @@
-.page--demo {
-  color: blue;
+.page-demo {
+  .page-about-ui {
+    color: #6200ee;
 
-  a {
-    color: blue;
+    a {
+      color: #6200ee;
+    }
+  }
+
+  .page-about-cli {
+    color: red;
+
+    a {
+      color: red;
+    }
   }
 }
