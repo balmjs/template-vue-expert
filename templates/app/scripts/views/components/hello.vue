@@ -13,7 +13,7 @@ import { ref } from 'vue';
 
 export default {
   name: 'Hello',
-  data() {
+  setup() {
     const msg = ref('');
 
     msg.value = 'Hello Vue 3.0 App';
